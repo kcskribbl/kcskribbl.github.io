@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { publications, topics } from '../data/site';
+import { blogs, publications, topics } from '../data/site';
 ---
 
 <BaseLayout
@@ -20,6 +20,38 @@ import { publications, topics } from '../data/site';
 
   <section class="section section-tinted">
     <div class="container">
+      {
+        blogs.length > 0 && (
+          <>
+            <div class="section-heading">
+              <p class="eyebrow">$ ls ./blogs</p>
+              <h2>Latest essays</h2>
+            </div>
+            <div class="feature-list blog-list">
+              {blogs.map((blog, index) => (
+                <a class="feature-row" href={blog.url} target="_blank" rel="noreferrer">
+                  <span class="feature-index">0{index + 1}</span>
+                  <div>
+                    <p class="feature-meta">Blog · {blog.date}</p>
+                    <h2>{blog.title}</h2>
+                    <p>{blog.description}</p>
+                    {blog.tags.length > 0 && (
+                      <div class="inline-tags">
+                        {blog.tags.map((tag) => <span>#{tag}</span>)}
+                      </div>
+                    )}
+                  </div>
+                  <span class="feature-arrow" aria-hidden="true">↗</span>
+                </a>
+              ))}
+            </div>
+          </>
+        )
+      }
+      <div class="section-heading publications-heading">
+        <p class="eyebrow">$ ls ./publications</p>
+        <h2>Publications & research</h2>
+      </div>
       <div class="feature-list">
         {publications.map((publication, index) => (
           <a class="feature-row" href={publication.url} target="_blank" rel="noreferrer">

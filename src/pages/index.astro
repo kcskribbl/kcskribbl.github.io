@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { focusAreas, profile, projects, publications, topics } from '../data/site';
+import { blogs, focusAreas, profile, projects, publications, topics } from '../data/site';
+
+const featuredWriting = [
+  ...blogs.filter((item) => item.featured).map((item) => ({ ...item, type: 'Blog' })),
+  ...publications.filter((item) => item.featured),
+];
 ---
 
 <BaseLayout>
@@ -26,6 +31,7 @@ import { focusAreas, profile, projects, publications, topics } from '../data/sit
             </div>
           </div>
           <aside class="hero-card" aria-label="Professional profile">
+            <img class="profile-photo" src={profile.photo} alt={`Portrait of ${profile.name}`} />
             <p class="terminal-command">$ cat profile.json</p>
             <div class="profile-output">
               <p><span>"name"</span>: "{profile.name}",</p>
@@ -77,7 +83,7 @@ import { focusAreas, profile, projects, publications, topics } from '../data/sit
         <h2>Ideas tested in the real world.</h2>
       </div>
       <div class="feature-list">
-        {publications.map((publication, index) => (
+        {featuredWriting.map((publication, index) => (
           <a class="feature-row" href={publication.url} target="_blank" rel="noreferrer">
             <span class="feature-index">0{index + 1}</span>
             <div>
