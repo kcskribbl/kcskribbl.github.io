@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { publications, topics } from '../data/site';
+---
+
+<BaseLayout
+  title="Writing & Research — Karthik Chandrasekaran"
+  description="Writing and research on engineering leadership, AI systems, information retrieval, and cloud architecture."
+>
+  <section class="page-hero section">
+    <div class="container narrow">
+      <p class="eyebrow">Writing & research</p>
+      <h1>Notes from building teams, platforms, and intelligent systems.</h1>
+      <p>
+        Practical ideas shaped by engineering leadership and a continuing interest in
+        applied AI, information retrieval, and dependable software systems.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-tinted">
+    <div class="container">
+      <div class="feature-list">
+        {publications.map((publication, index) => (
+          <a class="feature-row" href={publication.url} target="_blank" rel="noreferrer">
+            <span class="feature-index">0{index + 1}</span>
+            <div>
+              <p class="feature-meta">{publication.type} · {publication.date}</p>
+              <h2>{publication.title}</h2>
+              <p>{publication.description}</p>
+            </div>
+            <span class="feature-arrow" aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <p class="eyebrow">Topics I explore</p>
+      <div class="topic-cloud">
+        {topics.map((topic) => <span>{topic}</span>)}
+      </div>
+      <div class="editorial-note">
+        <h2>More essays are on the way.</h2>
+        <p>
+          This site is the home for future field notes, technical deep dives, and
+          reflections on engineering management.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

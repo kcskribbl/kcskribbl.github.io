@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile, topics } from '../data/site';
+---
+
+<BaseLayout
+  title="About — Karthik Chandrasekaran"
+  description="About Karthik Chandrasekaran, Principal Software Engineering Manager, technologist, and author."
+>
+  <section class="page-hero section">
+    <div class="container about-grid">
+      <div>
+        <p class="eyebrow">About</p>
+        <h1>Engineering is a human system.</h1>
+      </div>
+      <div class="about-intro">
+        <p class="lead">
+          I’m {profile.name}, a {profile.role} at {profile.company}.
+        </p>
+        <p>
+          My work sits at the intersection of technical strategy, organizational
+          leadership, and execution. I care about creating the conditions where teams
+          can make sound decisions, move with purpose, and build durable systems.
+        </p>
+        <p>
+          I’m also a technology enthusiast and polyglot programmer with interests
+          spanning cloud architecture, distributed systems, AI agents, large language
+          models, and information retrieval.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tinted">
+    <div class="container timeline-grid">
+      <div>
+        <p class="eyebrow">Experience</p>
+        <h2>Leading at scale</h2>
+      </div>
+      <article class="timeline-card">
+        <p class="feature-meta">Current</p>
+        <h3>{profile.role}</h3>
+        <p>{profile.company} · {profile.location}</p>
+      </article>
+      <div>
+        <p class="eyebrow">Education</p>
+        <h2>A foundation in technology</h2>
+      </div>
+      <article class="timeline-card">
+        <p class="feature-meta">Graduate study</p>
+        <h3>Master’s in Information Technology</h3>
+        <p>University of Arizona</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <p class="eyebrow">Areas of interest</p>
+      <div class="topic-cloud">
+        {topics.map((topic) => <span>{topic}</span>)}
+      </div>
+      <div class="button-row">
+        <a class="button button-primary" href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="button button-secondary" href={profile.links.orcid} target="_blank" rel="noreferrer">ORCID record</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

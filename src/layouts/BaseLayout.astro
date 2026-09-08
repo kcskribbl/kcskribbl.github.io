@@ -1,0 +1,90 @@
+---
+import '../styles/global.css';
+import { profile } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${profile.name} — Engineering Leader`,
+  description = profile.summary,
+} = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={profile.name} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#0b1714" />
+    <title>{title}</title>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: profile.name,
+        jobTitle: profile.role,
+        worksFor: { '@type': 'Organization', name: profile.company },
+        alumniOf: { '@type': 'CollegeOrUniversity', name: 'University of Arizona' },
+        url: 'https://kcskribbl.github.io',
+        sameAs: Object.values(profile.links),
+        knowsAbout: [
+          'Engineering Management',
+          'Cloud Architecture',
+          'Large Language Models',
+          'Information Retrieval',
+        ],
+      })}
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="/" aria-label={`${profile.name}, home`}>
+          <span class="brand-mark">{profile.initials}</span>
+          <span>{profile.name}</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="/#leadership">Leadership</a>
+          <a href="/writing">Writing</a>
+          <a href="/about">About</a>
+          <a class="nav-cta" href={profile.links.linkedin} target="_blank" rel="noreferrer">
+            Connect <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <strong>{profile.name}</strong>
+          <p>Leadership, technology, and ideas for building what matters.</p>
+        </div>
+        <div class="footer-links">
+          <a href={profile.links.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={profile.links.orcid} target="_blank" rel="noreferrer">ORCID</a>
+        </div>
+        <small>© {new Date().getFullYear()} {profile.name}. Views are my own.</small>
+      </div>
+    </footer>
+  </body>
+</html>
