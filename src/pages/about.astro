@@ -10,8 +10,8 @@ import { profile, topics } from '../data/site';
   <section class="page-hero section">
     <div class="container about-grid">
       <div>
-        <p class="eyebrow">About</p>
-        <h1>Engineering is a human system.</h1>
+        <p class="eyebrow">$ cat ./about.md</p>
+        <h1>Engineering is a human system.<span class="cursor" aria-hidden="true"></span></h1>
       </div>
       <div class="about-intro">
         <p class="lead">
@@ -34,7 +34,7 @@ import { profile, topics } from '../data/site';
   <section class="section section-tinted">
     <div class="container timeline-grid">
       <div>
-        <p class="eyebrow">Experience</p>
+        <p class="eyebrow">$ history | grep experience</p>
         <h2>Leading at scale</h2>
       </div>
       <article class="timeline-card">
@@ -43,7 +43,7 @@ import { profile, topics } from '../data/site';
         <p>{profile.company} · {profile.location}</p>
       </article>
       <div>
-        <p class="eyebrow">Education</p>
+        <p class="eyebrow">$ history | grep education</p>
         <h2>A foundation in technology</h2>
       </div>
       <article class="timeline-card">
@@ -56,7 +56,7 @@ import { profile, topics } from '../data/site';
 
   <section class="section">
     <div class="container narrow">
-      <p class="eyebrow">Areas of interest</p>
+      <p class="eyebrow">$ printenv INTERESTS</p>
       <div class="topic-cloud">
         {topics.map((topic) => <span>{topic}</span>)}
       </div>

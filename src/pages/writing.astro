@@ -9,8 +9,8 @@ import { publications, topics } from '../data/site';
 >
   <section class="page-hero section">
     <div class="container narrow">
-      <p class="eyebrow">Writing & research</p>
-      <h1>Notes from building teams, platforms, and intelligent systems.</h1>
+      <p class="eyebrow">$ cat ./writing/index.md</p>
+      <h1>Notes from building teams, platforms, and intelligent systems.<span class="cursor" aria-hidden="true"></span></h1>
       <p>
         Practical ideas shaped by engineering leadership and a continuing interest in
         applied AI, information retrieval, and dependable software systems.
@@ -38,7 +38,7 @@ import { publications, topics } from '../data/site';
 
   <section class="section">
     <div class="container narrow">
-      <p class="eyebrow">Topics I explore</p>
+      <p class="eyebrow">$ grep --topics ./writing</p>
       <div class="topic-cloud">
         {topics.map((topic) => <span>{topic}</span>)}
       </div>

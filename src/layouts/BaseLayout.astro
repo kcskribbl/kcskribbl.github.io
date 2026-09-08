@@ -29,7 +29,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content={profile.name} />
     <meta name="twitter:card" content="summary" />
-    <meta name="theme-color" content="#0b1714" />
+    <meta name="theme-color" content="#0d1117" />
     <title>{title}</title>
     <script
       type="application/ld+json"
@@ -56,15 +56,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="/" aria-label={`${profile.name}, home`}>
-          <span class="brand-mark">{profile.initials}</span>
-          <span>{profile.name}</span>
+          <span class="prompt-mark">~</span>
+          <span>karthik.dev</span>
+          <span class="mini-cursor" aria-hidden="true"></span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="/#leadership">Leadership</a>
-          <a href="/writing">Writing</a>
-          <a href="/about">About</a>
+          <a href="/#leadership">./leadership</a>
+          <a href="/writing">./writing</a>
+          <a href="/about">./about</a>
           <a class="nav-cta" href={profile.links.linkedin} target="_blank" rel="noreferrer">
-            Connect <span aria-hidden="true">↗</span>
+            connect()
           </a>
         </nav>
       </div>
@@ -75,7 +76,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <footer class="site-footer">
       <div class="container footer-wrap">
         <div>
-          <strong>{profile.name}</strong>
+          <strong><span class="terminal-green">karthik@portfolio</span>:~$ echo "{profile.name}"</strong>
           <p>Leadership, technology, and ideas for building what matters.</p>
         </div>
         <div class="footer-links">
@@ -83,7 +84,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <a href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           <a href={profile.links.orcid} target="_blank" rel="noreferrer">ORCID</a>
         </div>
-        <small>© {new Date().getFullYear()} {profile.name}. Views are my own.</small>
+        <small>© {new Date().getFullYear()} {profile.name} // views are my own <span class="mini-cursor" aria-hidden="true"></span></small>
       </div>
     </footer>
   </body>

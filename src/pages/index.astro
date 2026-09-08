@@ -5,28 +5,38 @@ import { focusAreas, profile, projects, publications, topics } from '../data/sit
 
 <BaseLayout>
   <section class="hero section">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Engineering leader · Technologist · Author</p>
-        <h1>I build teams and systems for the <em>next chapter.</em></h1>
-        <p class="hero-summary">{profile.summary}</p>
-        <div class="button-row">
-          <a class="button button-primary" href="#work">Explore my work</a>
-          <a class="button button-secondary" href={profile.links.linkedin} target="_blank" rel="noreferrer">
-            Connect on LinkedIn <span aria-hidden="true">↗</span>
-          </a>
+    <div class="container">
+      <div class="terminal-window">
+        <div class="terminal-bar" aria-hidden="true">
+          <span class="terminal-dot dot-red"></span>
+          <span class="terminal-dot dot-yellow"></span>
+          <span class="terminal-dot dot-green"></span>
+          <span class="terminal-title">karthik - zsh - 120x36</span>
+        </div>
+        <div class="hero-grid terminal-body">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="terminal-green">karthik@portfolio</span> ~ % whoami</p>
+            <h1>I build teams and systems for the <em>next chapter.</em><span class="cursor" aria-hidden="true"></span></h1>
+            <p class="hero-summary">{profile.summary}</p>
+            <div class="button-row">
+              <a class="button button-primary" href="#work">$ open ./work</a>
+              <a class="button button-secondary" href={profile.links.linkedin} target="_blank" rel="noreferrer">
+                $ connect --linkedin
+              </a>
+            </div>
+          </div>
+          <aside class="hero-card" aria-label="Professional profile">
+            <p class="terminal-command">$ cat profile.json</p>
+            <div class="profile-output">
+              <p><span>"name"</span>: "{profile.name}",</p>
+              <p><span>"role"</span>: "{profile.role}",</p>
+              <p><span>"company"</span>: "{profile.company}",</p>
+              <p><span>"location"</span>: "{profile.location}"</p>
+            </div>
+            <p class="terminal-status"><span>●</span> available for ideas</p>
+          </aside>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Professional profile">
-        <div class="portrait" aria-hidden="true">
-          <span>{profile.initials}</span>
-        </div>
-        <div class="availability">Currently</div>
-        <h2>{profile.role}</h2>
-        <p>{profile.company}</p>
-        <div class="card-rule"></div>
-        <p class="location">{profile.location}</p>
-      </aside>
     </div>
   </section>
 
@@ -40,7 +50,7 @@ import { focusAreas, profile, projects, publications, topics } from '../data/sit
     <div class="container">
       <div class="section-heading split-heading">
         <div>
-          <p class="eyebrow">How I lead</p>
+          <p class="eyebrow">$ ls ./leadership</p>
           <h2>People, systems, and outcomes.</h2>
         </div>
         <p>
@@ -63,7 +73,7 @@ import { focusAreas, profile, projects, publications, topics } from '../data/sit
   <section class="section section-tinted" id="work">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">Selected writing & research</p>
+        <p class="eyebrow">$ find ./writing -type featured</p>
         <h2>Ideas tested in the real world.</h2>
       </div>
       <div class="feature-list">
@@ -87,7 +97,7 @@ import { focusAreas, profile, projects, publications, topics } from '../data/sit
     <div class="container">
       <div class="section-heading split-heading">
         <div>
-          <p class="eyebrow">Building in public</p>
+          <p class="eyebrow">$ ls ./projects</p>
           <h2>Selected projects.</h2>
         </div>
         <p>Experiments and tools spanning backend systems, developer utilities, and the web.</p>
@@ -107,8 +117,8 @@ import { focusAreas, profile, projects, publications, topics } from '../data/sit
 
   <section class="section closing">
     <div class="container closing-inner">
-      <p class="eyebrow">Let’s exchange ideas</p>
-      <h2>Building organizations and technology that endure.</h2>
+      <p class="eyebrow">$ ./connect.sh</p>
+      <h2>Building organizations and technology that endure.<span class="cursor" aria-hidden="true"></span></h2>
       <p>
         I write about engineering leadership, applied AI, search systems, and lessons
         learned while scaling software and teams.
