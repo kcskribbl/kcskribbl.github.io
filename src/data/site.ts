@@ -29,11 +29,9 @@ export interface RecordItem {
   date: string;
   description: string;
   url: string;
+  type?: string;
+  metric?: string;
   published?: boolean;
-}
-
-export interface ContributionItem extends RecordItem {
-  type: string;
 }
 
 const visible = <T extends { published?: boolean }>(items: T[]) =>
@@ -47,6 +45,6 @@ export const blogs = visible(content.blogs as BlogItem[]);
 export const projects = visible(content.projects as ProjectItem[]);
 export const certifications = visible(content.certifications as RecordItem[]);
 export const credentials = visible(content.credentials as RecordItem[]);
-export const contributions = visible(content.contributions as ContributionItem[]);
-export const reviews = visible(content.reviews as ContributionItem[]);
+export const contributions = visible(content.contributions as RecordItem[]);
+export const reviews = visible(content.reviews as RecordItem[]);
 export const awards = visible(content.awards as RecordItem[]);

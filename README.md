@@ -57,11 +57,14 @@ These entries use the same fields plus `"type"`:
   "title": "Contribution title",
   "organization": "Organization name",
   "date": "2026",
+  "metric": "5 papers reviewed",
   "description": "A concise summary of the contribution.",
   "url": "https://example.com/contribution",
   "published": true
 }
 ```
+
+Use `"metric"` for a visible contribution count or role summary, such as `"12 papers reviewed"`, `"20 entries judged"`, or `"Proceedings editorial service"`.
 
 ## Development
 

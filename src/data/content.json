@@ -11,7 +11,8 @@
     "links": {
       "github": "https://github.com/kcskribbl",
       "linkedin": "https://www.linkedin.com/in/tokarthikc",
-      "orcid": "https://orcid.org/0009-0009-9411-4482"
+      "orcid": "https://orcid.org/0009-0009-9411-4482",
+      "scholar": "https://scholar.google.com/citations?user=VjCA5xUAAAAJ&hl=en"
     }
   },
   "focusAreas": [
@@ -33,10 +34,37 @@
   ],
   "publications": [
     {
+      "type": "The AI Journal",
+      "date": "July 30, 2026",
+      "title": "The Moving Target: Why Evaluating RAG Is AI’s Quietest Hard Problem",
+      "description": "Why evaluation—not retrieval—is the real bottleneck in production RAG, and why trustworthy systems need continuous measurement across retrieval quality, generation quality, cost, and drift.",
+      "url": "https://aijourn.com/the-moving-target-why-evaluating-rag-is-ais-quietest-hard-problem/",
+      "featured": true,
+      "published": true
+    },
+    {
+      "type": "BlogCACM",
+      "date": "July 24, 2026",
+      "title": "What Conflict Resolution Taught Me About Building AI",
+      "description": "An engineering leader’s perspective on disagreement as useful information, psychological safety, power dynamics, missing context, and a practical diagnose–prepare–engage–repair framework.",
+      "url": "https://cacm.acm.org/blogcacm/what-conflict-resolution-taught-me-about-building-ai/",
+      "featured": true,
+      "published": true
+    },
+    {
+      "type": "Research Square preprint",
+      "date": "July 24, 2026",
+      "title": "Bridging Retrieval Performance and Learning Outcomes: An Integrated Offline and Online Evaluation Framework for Retrieval-Augmented AI in Higher Education",
+      "description": "Co-authored with Gothai Sundaram, this preprint proposes an integrated framework connecting offline retrieval metrics with staged, online evidence of student learning outcomes.",
+      "url": "https://doi.org/10.21203/rs.3.rs-10450709/v1",
+      "featured": false,
+      "published": true
+    },
+    {
       "type": "BlogCACM",
       "date": "June 12, 2026",
       "title": "LLM Evaluation Is a Manufacturing Quality Problem. We’re Treating It Like a Software Unit Test",
-      "description": "A systems perspective on building repeatable, measurable quality practices for production AI.",
+      "description": "A manufacturing-quality approach to enterprise RAG evaluation using offline golden datasets, online telemetry, and continuous measurement of context precision, faithfulness, and answer relevance.",
       "url": "https://cacm.acm.org/blogcacm/llm-evaluation-is-a-manufacturing-quality-problem-were-treating-it-like-a-software-unit-test/",
       "featured": true,
       "published": true
@@ -86,8 +114,149 @@
       "published": true
     }
   ],
-  "contributions": [],
-  "reviews": [],
+  "contributions": [
+    {
+      "type": "Written interview",
+      "title": "AI, Software, and Wetware #125: Karthik Chandrasekaran",
+      "organization": "Six Peas / AI, Software, and Wetware",
+      "date": "August 27, 2026",
+      "description": "An interview on AI platform engineering, using AI as a research assistant rather than an authority, preserving human judgment in leadership, and building trust through consent, provenance, and testable claims.",
+      "url": "https://sixpeas.substack.com/p/aisw-125-ai-software-wetware-karthik-chandrasekaran-usa",
+      "published": true
+    },
+    {
+      "type": "Hackathon judge",
+      "title": "Spectrum Summer Hackathon 2026",
+      "organization": "Spectrum",
+      "date": "2026",
+      "metric": "20 entries judged",
+      "description": "Evaluated technical submissions and provided an industry perspective on solution quality, innovation, execution, and impact.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Hackathon judge",
+      "title": "Evorozen Innovators Hackathon 2026",
+      "organization": "Evorozen",
+      "date": "2026",
+      "metric": "10 entries judged",
+      "description": "Assessed emerging technology projects with emphasis on technical depth, practical value, originality, and clarity of execution.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Proceedings editor",
+      "title": "Conference on Trustworthy and Responsible AI and Computing Systems",
+      "organization": "ACM",
+      "date": "2026",
+      "metric": "Proceedings editorial service",
+      "description": "Supported the scholarly publication process as Proceedings Editor for research focused on trustworthy and responsible AI and computing systems.",
+      "url": "",
+      "published": true
+    }
+  ],
+  "reviews": [
+    {
+      "type": "Journal peer reviewer",
+      "title": "IEEE Transactions on Software Engineering",
+      "organization": "IEEE",
+      "date": "2026",
+      "metric": "1 manuscript reviewed",
+      "description": "Contributed expert peer review for research in software engineering, assessing technical rigor, relevance, and clarity.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Book chapter peer reviewer",
+      "title": "IGI Global Book Chapters",
+      "organization": "IGI Global",
+      "date": "2026",
+      "metric": "3 chapters reviewed",
+      "description": "Reviewed proposed book chapters for technical quality, structure, practical relevance, and contribution to the field.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Journal peer reviewer",
+      "title": "IEEE Transactions on Consumer Electronics",
+      "organization": "IEEE",
+      "date": "2026",
+      "metric": "2 manuscripts reviewed",
+      "description": "Evaluated research submissions spanning consumer technologies, intelligent systems, and applied engineering.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Conference peer reviewer",
+      "title": "International Conference on Emerging Trends in Information, Communication & Systems (ICETICS 2026)",
+      "organization": "IEEE",
+      "date": "2026",
+      "metric": "4 papers reviewed",
+      "description": "Reviewed conference research on emerging information, communication, and systems technologies.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Conference peer reviewer",
+      "title": "International Conference on Computer, Mechatronics, Robotics & Artificial Intelligence (ICCMRAI 2026)",
+      "organization": "ICCMRAI",
+      "date": "2026",
+      "metric": "28 papers reviewed",
+      "description": "Provided high-volume technical peer review across computer science, mechatronics, robotics, and artificial intelligence.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Conference peer reviewer",
+      "title": "International Conference on Emerging Digital Intelligence and Generative Engineering",
+      "organization": "International conference",
+      "date": "2026",
+      "metric": "9 papers reviewed",
+      "description": "Assessed research on digital intelligence, generative engineering, and emerging AI-enabled systems.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Conference peer reviewer",
+      "title": "Generative AI for Secure Systems 2026",
+      "organization": "IEEE",
+      "date": "2026",
+      "metric": "11 papers reviewed",
+      "description": "Reviewed research at the intersection of generative AI, cybersecurity, trustworthy systems, and secure engineering.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Technical Program Committee",
+      "title": "International Conference on Computer and Applications",
+      "organization": "International conference",
+      "date": "2026",
+      "metric": "3 papers reviewed",
+      "description": "Served on the Technical Program Committee and evaluated submissions for technical merit and program relevance.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Conference peer reviewer",
+      "title": "IEEE Symposium on Computers & Informatics",
+      "organization": "IEEE",
+      "date": "2026",
+      "metric": "1 paper reviewed",
+      "description": "Contributed peer review for research in computing, informatics, and related applied technology disciplines.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Book technical reviewer",
+      "title": "Manning Technical Review",
+      "organization": "Manning Publications",
+      "date": "2026",
+      "metric": "1 book reviewed",
+      "description": "Provided practitioner-focused technical review to strengthen accuracy, clarity, and usefulness for professional readers.",
+      "url": "",
+      "published": true
+    }
+  ],
   "awards": [],
   "topics": [
     "Engineering Management",
