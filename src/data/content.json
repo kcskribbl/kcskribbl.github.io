@@ -106,6 +106,15 @@
   "certifications": [],
   "credentials": [
     {
+      "type": "Research identifier",
+      "title": "ORCID iD 0009-0009-9411-4482",
+      "organization": "ORCID",
+      "date": "Public record",
+      "description": "Persistent researcher identifier connecting published work, professional affiliations, and verified peer-review activity.",
+      "url": "https://orcid.org/0009-0009-9411-4482",
+      "published": true
+    },
+    {
       "title": "Master’s in Information Technology",
       "organization": "University of Arizona",
       "date": "",
@@ -115,6 +124,16 @@
     }
   ],
   "contributions": [
+    {
+      "type": "Innovation Awards judge",
+      "title": "CES Innovation Awards 2027",
+      "organization": "Consumer Technology Association",
+      "date": "2026",
+      "metric": "25 projects evaluated",
+      "description": "Evaluated product submissions for the 2027 CES Innovation Awards program, assessing innovation, technical execution, and potential impact.",
+      "url": "https://www.ces.tech/ces-innovation-awards/official-rules-of-the-ces-innovation-awards-2027-program/",
+      "published": true
+    },
     {
       "type": "Written interview",
       "title": "AI, Software, and Wetware #125: Karthik Chandrasekaran",
@@ -157,6 +176,16 @@
   ],
   "reviews": [
     {
+      "type": "Workshop peer reviewer",
+      "title": "Africa in AI Workshop at NeurIPS 2026",
+      "organization": "Africa in AI / NeurIPS",
+      "date": "2026",
+      "metric": "3 papers reviewed",
+      "description": "Reviewed double-blind research submissions advancing trustworthy, resource-efficient AI grounded in African contexts.",
+      "url": "https://africainai.mailab.io/",
+      "published": true
+    },
+    {
       "type": "Journal peer reviewer",
       "title": "IEEE Transactions on Software Engineering",
       "organization": "IEEE",
@@ -171,7 +200,7 @@
       "title": "IGI Global Book Chapters",
       "organization": "IGI Global",
       "date": "2026",
-      "metric": "3 chapters reviewed",
+      "metric": "6 chapters reviewed",
       "description": "Reviewed proposed book chapters for technical quality, structure, practical relevance, and contribution to the field.",
       "url": "",
       "published": true
@@ -181,7 +210,7 @@
       "title": "IEEE Transactions on Consumer Electronics",
       "organization": "IEEE",
       "date": "2026",
-      "metric": "2 manuscripts reviewed",
+      "metric": "3 manuscripts reviewed",
       "description": "Evaluated research submissions spanning consumer technologies, intelligent systems, and applied engineering.",
       "url": "",
       "published": true
@@ -265,7 +294,10 @@
     "AI Agent Systems",
     "Retrieval-Augmented Generation",
     "Semantic Search",
+    "Information Retrieval",
     "Distributed Systems",
-    "Cloud Architecture"
+    "Cloud Architecture",
+    "Platform Engineering",
+    "Identity & Security"
   ]
 }
