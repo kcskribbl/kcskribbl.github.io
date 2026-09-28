@@ -34,6 +34,15 @@
   ],
   "publications": [
     {
+      "type": "BlogCACM",
+      "date": "September 28, 2026",
+      "title": "We’re Just Scratching the Surface of What AI Agents Can Do for Service Reliability",
+      "description": "Why modern systems excel at detecting problems quickly but still struggle to make immediate action safe, and how AI agents can help close that gap.",
+      "url": "https://cacm.acm.org/blogcacm/were-just-scratching-the-surface-of-what-ai-agents-can-do-for-service-reliability/",
+      "featured": true,
+      "published": true
+    },
+    {
       "type": "The AI Journal",
       "date": "July 30, 2026",
       "title": "The Moving Target: Why Evaluating RAG Is AI’s Quietest Hard Problem",
@@ -180,7 +189,6 @@
       "title": "Africa in AI Workshop at NeurIPS 2026",
       "organization": "Africa in AI / NeurIPS",
       "date": "2026",
-      "metric": "3 papers reviewed",
       "description": "Reviewed double-blind research submissions advancing trustworthy, resource-efficient AI grounded in African contexts.",
       "url": "https://africainai.mailab.io/",
       "published": true
@@ -190,7 +198,6 @@
       "title": "IEEE Transactions on Software Engineering",
       "organization": "IEEE",
       "date": "2026",
-      "metric": "1 manuscript reviewed",
       "description": "Contributed expert peer review for research in software engineering, assessing technical rigor, relevance, and clarity.",
       "url": "",
       "published": true
@@ -200,7 +207,6 @@
       "title": "IGI Global Book Chapters",
       "organization": "IGI Global",
       "date": "2026",
-      "metric": "6 chapters reviewed",
       "description": "Reviewed proposed book chapters for technical quality, structure, practical relevance, and contribution to the field.",
       "url": "",
       "published": true
@@ -210,7 +216,6 @@
       "title": "IEEE Transactions on Consumer Electronics",
       "organization": "IEEE",
       "date": "2026",
-      "metric": "3 manuscripts reviewed",
       "description": "Evaluated research submissions spanning consumer technologies, intelligent systems, and applied engineering.",
       "url": "",
       "published": true
@@ -220,7 +225,6 @@
       "title": "International Conference on Emerging Trends in Information, Communication & Systems (ICETICS 2026)",
       "organization": "IEEE",
       "date": "2026",
-      "metric": "4 papers reviewed",
       "description": "Reviewed conference research on emerging information, communication, and systems technologies.",
       "url": "",
       "published": true
@@ -230,7 +234,6 @@
       "title": "International Conference on Computer, Mechatronics, Robotics & Artificial Intelligence (ICCMRAI 2026)",
       "organization": "ICCMRAI",
       "date": "2026",
-      "metric": "28 papers reviewed",
       "description": "Provided high-volume technical peer review across computer science, mechatronics, robotics, and artificial intelligence.",
       "url": "",
       "published": true
@@ -240,7 +243,6 @@
       "title": "International Conference on Emerging Digital Intelligence and Generative Engineering",
       "organization": "International conference",
       "date": "2026",
-      "metric": "9 papers reviewed",
       "description": "Assessed research on digital intelligence, generative engineering, and emerging AI-enabled systems.",
       "url": "",
       "published": true
@@ -250,7 +252,6 @@
       "title": "Generative AI for Secure Systems 2026",
       "organization": "IEEE",
       "date": "2026",
-      "metric": "11 papers reviewed",
       "description": "Reviewed research at the intersection of generative AI, cybersecurity, trustworthy systems, and secure engineering.",
       "url": "",
       "published": true
@@ -260,7 +261,6 @@
       "title": "International Conference on Computer and Applications",
       "organization": "International conference",
       "date": "2026",
-      "metric": "3 papers reviewed",
       "description": "Served on the Technical Program Committee and evaluated submissions for technical merit and program relevance.",
       "url": "",
       "published": true
@@ -270,7 +270,6 @@
       "title": "IEEE Symposium on Computers & Informatics",
       "organization": "IEEE",
       "date": "2026",
-      "metric": "1 paper reviewed",
       "description": "Contributed peer review for research in computing, informatics, and related applied technology disciplines.",
       "url": "",
       "published": true
@@ -280,7 +279,6 @@
       "title": "Manning Technical Review",
       "organization": "Manning Publications",
       "date": "2026",
-      "metric": "1 book reviewed",
       "description": "Provided practitioner-focused technical review to strengthen accuracy, clarity, and usefulness for professional readers.",
       "url": "",
       "published": true
