@@ -57,14 +57,13 @@ These entries use the same fields plus `"type"`:
   "title": "Contribution title",
   "organization": "Organization name",
   "date": "2026",
-  "metric": "5 papers reviewed",
   "description": "A concise summary of the contribution.",
   "url": "https://example.com/contribution",
   "published": true
 }
 ```
 
-Use `"metric"` for a visible contribution count or role summary, such as `"12 papers reviewed"`, `"20 entries judged"`, or `"Proceedings editorial service"`.
+Describe contributions through responsibilities, technical judgment, and practical value. Do not display counts of papers reviewed, projects evaluated, or entries judged in badges or descriptions. The optional `"metric"` field can describe a role, such as `"Proceedings editorial service"`, or provide technical research context rather than activity totals.
 
 ### Add research or an industry talk
 
