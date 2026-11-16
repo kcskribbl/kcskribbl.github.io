@@ -5,8 +5,8 @@
     "role": "Principal Software Engineering Manager",
     "company": "Microsoft",
     "location": "Austin, Texas",
-    "tagline": "Building high-performing engineering teams and intelligent systems that scale.",
-    "summary": "Engineering leader, technology enthusiast, and polyglot programmer working at the intersection of people, platforms, cloud architecture, and applied AI.",
+    "tagline": "Building high-performing teams and trustworthy enterprise AI platforms.",
+    "summary": "I lead engineering teams at Microsoft, connecting enterprise AI, information retrieval, cloud architecture, and security. My work combines technical strategy and hands-on engineering to make quality, cost, and trust explicit design decisions.",
     "photo": "/profile.png",
     "links": {
       "github": "https://github.com/kcskribbl",
@@ -24,7 +24,7 @@
     {
       "number": "02",
       "title": "AI & information retrieval",
-      "description": "Exploring LLM systems, retrieval-augmented generation, semantic search, relevance, and evaluation."
+      "description": "Connecting retrieval quality, permission-aware grounding, agent evaluation, and cost-aware architecture to dependable AI experiences."
     },
     {
       "number": "03",
@@ -33,6 +33,16 @@
     }
   ],
   "publications": [
+    {
+      "type": "The Byte / The AI Collective",
+      "date": "November 17, 2026",
+      "status": "Scheduled for publication",
+      "title": "The Governance Layer Nobody Regulates",
+      "description": "An editorially reviewed essay on why enterprise AI governance must protect information at retrieval time through authorization, provenance, and defense in depth. Scheduled for November 17; a public article link will be added after release.",
+      "url": "",
+      "featured": false,
+      "published": true
+    },
     {
       "type": "BlogCACM",
       "date": "September 28, 2026",
@@ -88,8 +98,98 @@
       "published": true
     }
   ],
+  "research": [
+    {
+      "type": "Conference paper",
+      "title": "Code Mode for Token-Efficient Agentic Access to Large Enterprise Knowledge Stores: A Study on Inventory Management and Product Catalogs",
+      "organization": "IEEE GAISS 2026",
+      "date": "October 30, 2026",
+      "status": "Presented",
+      "metric": "50,000 synthetic inventory items · 120 tools",
+      "description": "Studied how a compact typed API and sandboxed computation can keep intermediate records outside an agent's context window. A token-cost model and five synthetic workloads quantify the tradeoffs against direct tool calling; these are controlled benchmark results, not production savings.",
+      "url": "https://gaiss.info/",
+      "linkLabel": "Conference details",
+      "published": true
+    },
+    {
+      "type": "Conference paper",
+      "title": "Bloom-Filter Cost Savings for RAG–LLM Evaluation in Offline Validation",
+      "organization": "IEEE iGET 2026",
+      "date": "October 22, 2026",
+      "status": "Presented",
+      "description": "Designed a cost-aware evaluation approach combining Bloom filters, cached verdicts, and optional verification before reuse. A controlled QA proxy benchmark reported 61.2% lower modeled evaluation cost with 99.2% label agreement using a deterministic reference judge, not a production LLM deployment.",
+      "url": "https://ieee-iget.org/",
+      "linkLabel": "Conference details",
+      "published": true
+    },
+    {
+      "type": "Conference paper",
+      "title": "DTM Grounding Allocation: Value-Weighted Token Budgeting for Enterprise Retrieval-Augmented Generation",
+      "organization": "EDIGE 2026",
+      "date": "Accepted September 29, 2026",
+      "status": "Accepted for presentation",
+      "description": "Proposed a training-free policy for distributing a fixed grounding-token budget across retrieved evidence using relevance estimates and length-capped weighted allocation. Evaluated retained answer words on SQuAD and HotpotQA; the measurements do not establish generated-answer accuracy or production token savings.",
+      "url": "https://www.edgeconf.in/",
+      "linkLabel": "Conference details",
+      "published": true
+    },
+    {
+      "type": "Workshop paper",
+      "title": "SovereignRAG-Eval: Compute- and Sovereignty-Aware Offline-to-Online Retrieval Evaluation",
+      "organization": "Africa in AI Workshop at NeurIPS 2026",
+      "date": "Accepted October 15, 2026",
+      "status": "Accepted workshop paper · December event",
+      "description": "Proposed an evaluation protocol joining human relevance judgments, locally validated model judges, consented online comparisons, and query-level resource accounting. Addresses multilingual quality, compute constraints, and data sovereignty. This is protocol research accepted to the workshop, not the NeurIPS main conference; no deployment gains are claimed.",
+      "url": "https://openreview.net/forum?id=nuqBgzdGNN",
+      "linkLabel": "OpenReview record",
+      "published": true
+    },
+    {
+      "type": "Conference paper",
+      "title": "Benchmark-Driven Login Risk Assessment under LLM-Driven Agentic Browsing",
+      "organization": "ICCA 2026",
+      "date": "December 21–24, 2026",
+      "status": "Accepted · conference upcoming",
+      "description": "Developed a threat model and evaluation framework combining fingerprint, behavioral, contextual, and drift signals for adaptive authentication. Validation uses a tabular fraud-data proxy and synthetic adversarial scenarios, not real browser-agent traffic. Presentation and proceedings publication remain pending.",
+      "url": "https://icca-conf.info/",
+      "linkLabel": "Conference details",
+      "published": true
+    }
+  ],
+  "talks": [
+    {
+      "type": "Industry talk",
+      "title": "Enterprise AI Governance and Secure Grounding: Privacy, Zero Trust, and Observability in Agentic AI Systems",
+      "organization": "R Consortium · R+AI 2026",
+      "date": "November 11, 2026",
+      "status": "Presented",
+      "description": "Translated enterprise AI architecture into practical R/Shiny workflows: permission-aware retrieval, task contracts, privacy-safe observability, calibrated evaluation, and risk-based release decisions. Presented in a personal capacity.",
+      "url": "https://rconsortium.github.io/RplusAI_website/program.html",
+      "linkLabel": "Conference program",
+      "featured": true,
+      "published": true
+    },
+    {
+      "type": "Industry talk",
+      "title": "Beyond Accuracy: Engineering Evals for Trustworthy Agentic AI",
+      "organization": "All Day AI 2026 · BUILD track",
+      "date": "October 22, 2026",
+      "status": "Presented",
+      "description": "Shared an engineering approach to evaluating agent behavior beyond answer accuracy, including task success, authorization boundaries, failure recovery, reliability, latency, and cost. Speaker and session are listed in the official conference archive; participation was in a personal capacity.",
+      "url": "https://www.alldayai.com/speakers#build",
+      "linkLabel": "Speaker archive",
+      "published": true
+    }
+  ],
   "blogs": [],
   "projects": [
+    {
+      "title": "Encrypted Patient-Record Provenance",
+      "description": "Built an encrypted FHIR provenance proof of concept for Public Invention's Global Patient Record Project, with signed record histories and a provider-neutral storage interface. A synthetic-data demonstrator, not a clinically deployed health-record system.",
+      "language": "TypeScript · Secure systems",
+      "url": "https://github.com/PubInv/GDP2-project-85",
+      "published": true
+    },
     {
       "title": "JSON Comparator",
       "description": "A Java utility for comparing and reasoning about JSON documents.",
@@ -137,10 +237,140 @@
       "type": "Innovation Awards judge",
       "title": "CES Innovation Awards 2027",
       "organization": "Consumer Technology Association",
+      "date": "September 2026",
+      "metric": "25 product reviews completed",
+      "description": "Served as an external Round One judge, evaluating engineering and functionality, design, and innovation for the 2027 awards program. CTA confirmed all 25 completed product reviews and issued a Certificate of Recognition in November 2026.",
+      "url": "https://www.ces.tech/ces-innovation-awards/innovation-awards/judges/",
+      "linkLabel": "Judging program",
+      "featured": true,
+      "published": true
+    },
+    {
+      "type": "Judging systems & technical evaluation",
+      "title": "RiverHacks × NASA Space Apps Austin 2026",
+      "organization": "RiverHacks · Austin Community College local organizers",
+      "date": "November 2026",
+      "metric": "Scoring workflows delivered · 5 projects scored",
+      "description": "Configured judging criteria and judge records, prepared Excel and Python workflows to convert raw scores into weighted category results, and clarified operational ownership with local organizers. Also scored five middle-school projects, connecting hands-on tooling with consistent technical evaluation.",
+      "url": "https://riverhacks-spaceapps.org/",
+      "linkLabel": "Local event",
+      "featured": true,
+      "published": true
+    },
+    {
+      "type": "Innovation awards judge",
+      "title": "BIG Awards for Business 2026",
+      "organization": "Business Intelligence Group",
+      "date": "November 2, 2026",
+      "metric": "11 nominations evaluated",
+      "description": "Completed and submitted all 11 assigned nomination evaluations, applying the program's criteria and providing independent feedback on business and technology submissions.",
+      "url": "https://judges.bintelligence.com/karthik-chandrasekaran",
+      "linkLabel": "Judge profile",
+      "published": true
+    },
+    {
+      "type": "Hackathon judge",
+      "title": "HackHarvard 2026",
+      "organization": "HackHarvard · Harvard University",
+      "date": "October 18, 2026",
+      "description": "Evaluated live project demonstrations for innovation, technical complexity, functionality, usability, and teamwork, and provided constructive implementation feedback directly to competing teams.",
+      "url": "https://hackharvard2026.devpost.com/",
+      "linkLabel": "Event and judging criteria",
+      "published": true
+    },
+    {
+      "type": "Hackathon judge",
+      "title": "HackTX 2026",
+      "organization": "Freetail Hackers · The University of Texas at Austin",
+      "date": "October 25, 2026",
+      "metric": "15 projects evaluated",
+      "description": "Assessed 15 student-built projects through live demonstrations and questions, scoring technology, design, completion, and learning, and giving teams feedback on their implementations.",
+      "url": "https://hacktx26.devpost.com/",
+      "linkLabel": "Event and judging criteria",
+      "published": true
+    },
+    {
+      "type": "Technical judge",
+      "title": "Wacode 2026",
+      "organization": "ACM at Baylor · Baylor Research and Innovation Collaborative",
+      "date": "October 24, 2026",
+      "metric": "12 attributed project evaluations",
+      "description": "Reviewed approaches during pre-judging and working solutions during final presentations. Applied a weighted rubric covering problem fit, responsible information handling, useful knowledge, audience understanding, and implementation, with written observations and follow-up questions.",
+      "url": "https://www.wacode2026.com/",
+      "linkLabel": "Event details",
+      "published": true
+    },
+    {
+      "type": "Hackathon judge",
+      "title": "K-State Generative AI Hackathon",
+      "organization": "Kansas State University · Heartland AI Symposium",
+      "date": "November 2026",
+      "metric": "5 team evaluations submitted",
+      "description": "Remotely evaluated project pages and presentation videos for problem quality, functionality, AI use, responsible AI, usefulness, and communication, completing all five assigned team evaluations.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Local hackathon judge",
+      "title": "NASA Space Apps Challenge — Los Angeles",
+      "organization": "NASA Space Apps Los Angeles local organizers",
+      "date": "November 14–15, 2026",
+      "metric": "5 projects evaluated",
+      "description": "Scored five projects and provided individualized feedback on impact, creativity, validity, relevance, and presentation as a member of the local judging panel.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Technical judge",
+      "title": "Speed Demon",
+      "organization": "Hackathon Raptors",
+      "date": "November 3–12, 2026",
+      "metric": "5 finalist projects assigned and reviewed",
+      "description": "Reviewed five Batch 3 finalist projects, contributing engineering assessment of code quality, optimization techniques, and measurement logs alongside machine benchmarking.",
+      "url": "",
+      "published": true
+    },
+    {
+      "type": "Invention Coach",
+      "title": "Global Patient Record Project",
+      "organization": "Public Invention",
       "date": "2026",
-      "metric": "25 projects evaluated",
-      "description": "Evaluated product submissions for the 2027 CES Innovation Awards program, assessing innovation, technical execution, and potential impact.",
-      "url": "https://www.ces.tech/ces-innovation-awards/official-rules-of-the-ces-innovation-awards-2027-program/",
+      "description": "Contributed architectural leadership and an encrypted FHIR provenance prototype with a replaceable storage boundary. The founder credited the modular architecture as a foundation for exploring future storage and availability options. Work remains at the synthetic-data prototype stage.",
+      "url": "https://github.com/PubInv/GDP2-project-85/issues/1",
+      "linkLabel": "Architecture discussion",
+      "featured": true,
+      "published": true
+    },
+    {
+      "type": "Technology Committee member",
+      "title": "Nonprofit Technology Advisory Service",
+      "organization": "NTEN",
+      "date": "2026–2027",
+      "description": "Serve on NTEN's Technology Committee, whose remit includes testing, technology decisions, processes, and user experience across nonprofit-facing tools and systems. Participated in the September 2026 kickoff.",
+      "url": "https://www.nten.org/connect/committees",
+      "linkLabel": "Committee roster",
+      "published": true
+    },
+    {
+      "type": "Session Chair",
+      "title": "Smart Energy & Sustainability",
+      "organization": "IEEE Smart City USA 2026",
+      "date": "November 21, 2026",
+      "status": "Upcoming appointment",
+      "metric": "11 presentations assigned across two sessions",
+      "description": "Appointed to chair the morning and afternoon Smart Energy & Sustainability sessions, with preparation responsibilities covering presentation readiness, technical checks, and moderator coordination. The conference has not yet occurred as of November 16, 2026.",
+      "url": "https://ieeesmartcityconference.org/agenda.html",
+      "linkLabel": "Conference agenda",
+      "published": true
+    },
+    {
+      "type": "Invited judge",
+      "title": "HackUMass XIV",
+      "organization": "HackUMass · University of Massachusetts Amherst",
+      "date": "November 15, 2026",
+      "status": "Appointment confirmed",
+      "description": "Invited to join the judging panel for student-built technology projects, with an assigned process for live demonstrations, team questions, and independent scoring.",
+      "url": "",
       "published": true
     },
     {
@@ -184,6 +414,17 @@
     }
   ],
   "reviews": [
+    {
+      "type": "Conference peer reviewer",
+      "title": "IEEE International Conference on AI Engineering and Innovation (AIEI 2027)",
+      "organization": "IEEE AIEI",
+      "date": "November 2026",
+      "metric": "2 completed paper reviews",
+      "description": "Provided substantive assessments of technical rigor, reproducibility, validation, and responsible AI, with feedback for authors and the program committee. Reviews were completed in 2026 for the January 2027 conference.",
+      "url": "https://www.aiengineering-conference.org/",
+      "linkLabel": "Conference details",
+      "published": true
+    },
     {
       "type": "Workshop peer reviewer",
       "title": "Africa in AI Workshop at NeurIPS 2026",
@@ -241,10 +482,12 @@
     {
       "type": "Conference peer reviewer",
       "title": "International Conference on Emerging Digital Intelligence and Generative Engineering",
-      "organization": "International conference",
+      "organization": "EDIGE 2026 · VIT Bhopal University",
       "date": "2026",
-      "description": "Assessed research on digital intelligence, generative engineering, and emerging AI-enabled systems.",
-      "url": "",
+      "metric": "9 completed paper reviews",
+      "description": "Evaluated originality, technical support, related work, and presentation, with substantive feedback for authors and the program committee. Organizer acknowledgment and an issued reviewer certificate confirm service.",
+      "url": "https://www.edgeconf.in/",
+      "linkLabel": "Conference details",
       "published": true
     },
     {

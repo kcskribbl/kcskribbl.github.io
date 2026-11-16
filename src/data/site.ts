@@ -17,6 +17,7 @@ export interface PublicationItem extends LinkItem {
   type: string;
   date: string;
   featured?: boolean;
+  status?: string;
 }
 
 export interface ProjectItem extends LinkItem {
@@ -31,6 +32,9 @@ export interface RecordItem {
   url: string;
   type?: string;
   metric?: string;
+  status?: string;
+  featured?: boolean;
+  linkLabel?: string;
   published?: boolean;
 }
 
@@ -41,6 +45,8 @@ export const profile = content.profile;
 export const focusAreas = content.focusAreas;
 export const topics = content.topics;
 export const publications = visible(content.publications as PublicationItem[]);
+export const research = visible(content.research satisfies RecordItem[]);
+export const talks = visible(content.talks satisfies RecordItem[]);
 export const blogs = visible(content.blogs as BlogItem[]);
 export const projects = visible(content.projects as ProjectItem[]);
 export const certifications = visible(content.certifications as RecordItem[]);

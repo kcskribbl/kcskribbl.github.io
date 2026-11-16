@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { blogs, profile, publications, topics } from '../data/site';
+import RecordCard from '../components/RecordCard.astro';
+import { blogs, profile, publications, research, topics } from '../data/site';
 ---
 
 <BaseLayout
@@ -58,20 +59,40 @@ import { blogs, profile, publications, topics } from '../data/site';
       }
       <div class="section-heading publications-heading">
         <p class="eyebrow">$ ls ./publications</p>
-        <h2>Publications & research</h2>
+        <h2>Articles & essays</h2>
       </div>
       <div class="feature-list">
-        {publications.map((publication, index) => (
-          <a class="feature-row" href={publication.url} target="_blank" rel="noreferrer">
-            <span class="feature-index">0{index + 1}</span>
-            <div>
-              <p class="feature-meta">{publication.type} · {publication.date}</p>
-              <h2>{publication.title}</h2>
-              <p>{publication.description}</p>
-            </div>
-            <span class="feature-arrow" aria-hidden="true">↗</span>
-          </a>
-        ))}
+        {publications.map((publication, index) => {
+          const Tag = publication.url ? 'a' : 'article';
+          return (
+            <Tag class="feature-row" href={publication.url || undefined} target={publication.url ? '_blank' : undefined} rel={publication.url ? 'noreferrer' : undefined}>
+              <span class="feature-index">{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <p class="feature-meta">{publication.type} · {publication.date}{publication.status ? ` · ${publication.status}` : ''}</p>
+                <h2>{publication.title}</h2>
+                <p>{publication.description}</p>
+              </div>
+              {publication.url && <span class="feature-arrow" aria-hidden="true">↗</span>}
+            </Tag>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">$ ls ./research</p>
+        <h2>Applied AI & systems research</h2>
+        <p>
+          Work on evaluation cost, agent architectures, grounding quality, and authentication.
+          Presentation and acceptance statuses are shown separately; conference acceptance
+          does not imply a published proceedings paper.
+        </p>
+      </div>
+      <div class="record-grid">
+        {research.map((item) => <RecordCard item={item} />)}
       </div>
     </div>
   </section>

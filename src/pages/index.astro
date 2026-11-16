@@ -1,10 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { blogs, focusAreas, profile, projects, publications, topics } from '../data/site';
+import RecordCard from '../components/RecordCard.astro';
+import { blogs, contributions, focusAreas, profile, projects, publications, talks, topics } from '../data/site';
 
 const featuredWriting = [
   ...blogs.filter((item) => item.featured).map((item) => ({ ...item, type: 'Blog' })),
   ...publications.filter((item) => item.featured),
+];
+const featuredContributions = [
+  ...talks.filter((item) => item.featured),
+  ...contributions.filter((item) => item.featured),
 ];
 ---
 
@@ -21,10 +26,10 @@ const featuredWriting = [
         <div class="hero-grid terminal-body">
           <div class="hero-copy">
             <p class="eyebrow"><span class="terminal-green">karthik@portfolio</span> ~ % whoami</p>
-            <h1>I build teams and systems for the <em>next chapter.</em><span class="cursor" aria-hidden="true"></span></h1>
+            <h1>I build teams and <em>trustworthy AI platforms.</em><span class="cursor" aria-hidden="true"></span></h1>
             <p class="hero-summary">{profile.summary}</p>
             <div class="button-row">
-              <a class="button button-primary" href="#work">$ open ./work</a>
+              <a class="button button-primary" href="#contributions">$ open ./contributions</a>
               <a class="button button-secondary" href={profile.links.linkedin} target="_blank" rel="noreferrer">
                 $ connect --linkedin
               </a>
@@ -43,6 +48,27 @@ const featuredWriting = [
           </aside>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-tinted" id="contributions">
+    <div class="container">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">$ git log --industry</p>
+          <h2>Engineering depth. Shared in practice.</h2>
+        </div>
+        <p>
+          Secure-systems engineering, industry speaking, and independent technical
+          evaluation beyond my work at Microsoft.
+        </p>
+      </div>
+      <div class="record-grid">
+        {featuredContributions.map((item) => <RecordCard item={item} />)}
+      </div>
+      <a class="text-link" href="/credentials">All contributions, speaking & service <span aria-hidden="true">→</span></a>
+      <br />
+      <a class="text-link" href="/writing#research">Explore applied AI research <span aria-hidden="true">→</span></a>
     </div>
   </section>
 

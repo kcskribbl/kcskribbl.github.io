@@ -10,7 +10,7 @@ All portfolio content is stored in:
 src/data/content.json
 ```
 
-Edit that one file to update the profile or add blogs, publications, projects, certifications, credentials, contributions, reviews, awards, and topics. Astro automatically refreshes the page while the local development server is running. Committing and pushing the JSON change automatically publishes it through GitHub Pages.
+Edit that one file to update the profile or add blogs, publications, research, talks, projects, certifications, credentials, contributions, reviews, awards, and topics. Astro automatically refreshes the page while the local development server is running. Committing and pushing the JSON change automatically publishes it through GitHub Pages.
 
 Each list item supports `"published": true`. Set it to `false` to keep an entry in the file without displaying it.
 
@@ -65,6 +65,14 @@ These entries use the same fields plus `"type"`:
 ```
 
 Use `"metric"` for a visible contribution count or role summary, such as `"12 papers reviewed"`, `"20 entries judged"`, or `"Proceedings editorial service"`.
+
+### Add research or an industry talk
+
+The `"research"` and `"talks"` arrays use the same fields as contributions. Research appears on the writing page; talks appear on the contributions page. Set `"featured": true` on a talk or contribution to feature it on the home page.
+
+Use `"status"` to distinguish `"Presented"`, `"Accepted for presentation"`, or `"Upcoming appointment"`, and `"linkLabel"` to describe the destination accurately, such as `"Conference program"` rather than implying a conference homepage links to a published paper.
+
+Articles in `"publications"` also support `"status"`. A scheduled article can have an empty `"url"` and will render without a link. Add its public URL and update its status only after publication is confirmed. Keep confidential evidence, private previews, judging access links, and correspondence outside the repository.
 
 ## Development
 
